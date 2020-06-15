@@ -1,5 +1,6 @@
-//Протокол Coordinator, обязывающий имплементировать объект navigationController типа UINavigationController, 
+/*Протокол Coordinator, обязывающий имплементировать объект navigationController типа UINavigationController, 
 а также осуществлять метод navigate()
+*/
 
 import UIKit
 
@@ -8,10 +9,11 @@ protocol Coordinator {
     func navigate()
 }
 
-//Протокол Storyboarded, на который могут подписываться только классы типа UIViewController. 
+/*Протокол Storyboarded, на который могут подписываться только классы типа UIViewController. 
 Для того, чтобы данный протокол сработал, необходимо в Storyboard-e в качестве Storyboard ID обозначать название самого класса
 без каких-либо приставок! Таким образом подтягивание нужного контроллера будет осуществляться через протокол, 
 без необходимости искать идентификатор в файле.
+*/
 
 protocol Storyboarded {
     static func instantiate() -> Self
